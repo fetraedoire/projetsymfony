@@ -1,0 +1,32 @@
+/*!
+ * Start Bootstrap - Business Frontpage (https://startbootstrap.com/template/business-frontpage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+body{
+  background-color: #525252;
+}
+.centered-form{
+margin-top: 60px;
+}
+
+.centered-form .panel{
+background: rgba(255, 255, 255, 0.8);
+box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+.error{
+  color: crimson;
+  font-size: 12px;
+}
+label{
+  font-size:16px;
+}
+#inputEmail,#inputPassword{
+  font-size: 14px;
+}
+.col{
+  margin-left: 3px;
+}

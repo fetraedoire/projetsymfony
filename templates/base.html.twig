@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Site web 2021</title>
+		<link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
+		<link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type="image/x-icon">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+			<a href="#" class="navbar-brand">
+				<img src="home.png" width="50"></a>
+			<a href="#" class="navbar-brand">Site e-commerce</a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#menuhamburger">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menuhamburger">
+
+				{% if not app.user%}
+					<ul class="navbar-nav m-auto">
+						<li class="nav-item active">
+							<a href="#" class="nav-link">Accueil</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">A propos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{path('security_login')}}" class="nav-link">Connexion</a>
+						</li>
+					</ul>
+				{% else %}
+					<ul class="navbar-nav m-auto">
+						<li class="nav-item active">
+							<a href="#" class="nav-link">Accueil</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">A propos</a>
+						</li>
+						<li class="nav-item">
+							<a href="/cheque" class="nav-link">Cheque</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{path('security_logout')}}" class="nav-link">Deconnexion</a>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<input class="form-control me-sm-2" type="text" placeholder="Search">
+						<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				{% endif %}
+			</ul>
+		</div>
+	</body>
+</html></nav>{# <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+																																														<div class="container-fluid">
+																																															<div class="collapse navbar-collapse" id="navbarColor01">
+																																											
+																																																{% if not app.user%}
+																																																	<ul class="nav navbar-nav navbar-right">
+																																																		<li class="nav-item">
+																																																			<a class="nav-link" href="#">About</a>
+																																																		</li>
+																																																		<li class="nav-item">
+																																																			<a href="{{path('security_login')}}" class="nav-link">Connexion</a>
+																																																		</li>
+																																											
+																																																	</ul>
+																																																{% else %}
+																																																	<ul class="navbar-nav me-auto">
+																																																		<li class="nav-item">
+																																																			<a class="nav-link" href="#">About</a>
+																																																		</li>
+																																																		<li class="nav-item">
+																																																			<a class="nav-link active" href="#">Home
+																																																				<span class="visually-hidden">(current)</span>
+																																																			</a>
+																																																		</li>
+																																																		<li class="nav-item">
+																																																			<a class="nav-link" href="#">Features</a>
+																																																		</li>
+																																																		<li class="nav-item">
+																																																			<a class="nav-link" href="#">Pricing</a>
+																																																		</li>
+																																																		<li class="nav-item">
+																																																			<a href="{{path('security_logout')}}" class="nav-link">Déconnexion</a>
+																																																		</li>
+																																																	</ul>
+																																																	<form class="d-flex">
+																																																		<input class="form-control me-sm-2" type="text" placeholder="Search">
+																																																		<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+																																																	</form>
+																																																{% endif %}
+																																											
+																																											
+																																															</div>
+																																														</div>
+																																													</nav> #}<div class="container"> {% block body %}{% endblock %}
+</div>
+
+
+{% block javascripts %}{% endblock %}</body></html></body></html></body></html>

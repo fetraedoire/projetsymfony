@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChequeController!
+{% endblock %}
+
+{% block body %}
+	{% if cheques | length>0 %}
+		<table class="table">
+			<tread>
+				<tr>
+					<th>Date</th>
+					<th>Number</th>
+					<th>Price</th>
+					<th>Description</th>
+					<th>Banque</th>
+					<th>User</th>
+					<th></th>
+				</tr>
+			</tread>
+			<tbody>
+				{% for cheque in cheques %}
+					<tr>
+						<th>{{cheque.createdAt | date("d/m/Y")}}</th>
+						<th>{{cheque.Number}}</th>
+						<th>{{cheque.Price}}</th>
+						<th>{{cheque.Description | raw}}</th>
+						<th>{{cheque.Banque}}</th>
+						<th>{{cheque.user}}</th>
+						<th>
+							<div class="row">
+								<div class="col col-lg-3">
+									<a href="" class="btn btn-danger btn-sm">
+										<span class="fa fa-trash" aria-hidden="true"></span>
+									</a>
+								</div>
+								<div class="col col-lg-3">
+									<a href="" class="btn btn-danger btn-sm">
+										<span class="fa fa-edit" aria-hidden="true"></span>
+									</a>
+								</div>
+							</div>
+						</th>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>Pas de cheque</p>
+	{% endif %}
+
+
+{% endblock %}
